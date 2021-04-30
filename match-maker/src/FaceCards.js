@@ -2,23 +2,22 @@ import React from 'react'
 import './FaceCards.css'
 import { useState } from 'react';
 import TinderCard from "react-tinder-card";
+import {useEffect} from 'react';
+import axios from './Axios.js'
 
 function FaceCards() {
 
-    const [people,setPeople] = useState([
-        {
-            name: "Elon Musk",
-            url: "https://vz.cnwimg.com/thumb-1200x/wp-content/uploads/2010/06/Elon-Musk.jpg"
-        },
-        {
-            name: "Robert Downey Jr",
-            url: "https://d23.com/app/uploads/2019/08/2019-disneylegend-rdj.jpg"
-        },
-        {
-            name: "Leonardo Dicaprio",
-            url: "https://wallpapercave.com/wp/wp1809191.jpg"
-        },
-    ]);
+    const [people,setPeople] = useState([]);
+    useEffect(() => {
+        
+        async function fetchData(){
+            const req=await axios.get('/matchmaker/cards');
+            setPeople(req.data);
+        }
+
+        fetchData();
+
+    }, [])
 
     const swiped=(direction,nameToDelete)=>{
         console.log("removing: "+nameToDelete);
