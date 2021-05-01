@@ -2,7 +2,7 @@
 
 ## My take on making a Tinder Clone
 
-Hosted the fronted on : <b>Firebase</b>
+Hosted the fronted on : <b>Firebase</b><br>
 Hosted the backend on : <b>Heroku</b>
 
 Hosting URL: https://matchmaker-2c5d1.web.app
