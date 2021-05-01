@@ -2,6 +2,11 @@
 
 ## My take on making a Tinder Clone
 
+Hosted the fronted on : <b>Firebase</b>
+Hosted the backend on : <b>Heroku</b>
+
+Hosting URL: https://matchmaker-2c5d1.web.app
+
 `npm start`
     Starts the development server.
 
@@ -21,3 +26,4 @@ We suggest that you begin by typing:
   `npm start`
 
 <b>Happy hacking!</b>
+
